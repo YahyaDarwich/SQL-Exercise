@@ -36,3 +36,27 @@ WHERE Name = "Layal";
 
 DELETE FROM students 
 WHERE Name = 'Layal';
+
+
+# 1
+SELECT employees.Name, companies.Name, companies.Date
+FROM employees, companies
+WHERE employees.Company = companies.Name;
+# OR create a table with this 2nd solution
+CREATE TABLE EmployeesHistory AS
+SELECT employees.Name, companies.Name, companies.Date
+FROM employees, companies
+WHERE employees.Company = companies.Name;
+
+# 2
+SELECT employees.Name
+FROM employees, companies
+WHERE employees.Company = companies.Name
+And companies.Date < 2000;
+
+# 3
+SELECT companies.Name
+FROM employees, companies
+WHERE employees.Company = companies.Name
+And employees.Role = "Graphic Designer";
+
