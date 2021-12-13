@@ -57,12 +57,7 @@ WHERE Name = 'Layal';
 SELECT employees.Name, companies.Name, companies.Date
 FROM employees, companies
 WHERE employees.Company = companies.Name;
-# 1 OR create a table (2nd solution)
-CREATE TABLE EmployeesHistory AS
-SELECT employees.Name, companies.Name, companies.Date
-FROM employees, companies
-WHERE employees.Company = companies.Name;
-# 1 OR Using INNER Join (3rd solution)
+# 1 OR Using INNER Join (2nd solution)
 SELECT employees.Name, companies.Name, companies.Date
 FROM employees
 INNER JOIN companies
